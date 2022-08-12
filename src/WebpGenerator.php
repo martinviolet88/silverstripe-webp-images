@@ -19,6 +19,10 @@ final class WebpGenerator
             return $url;
         }
 
+        if (str_contains($url, 'webp')) {
+            return $url;
+        }
+
         if (!in_array($mimeType, ['image/png', 'image/jpeg', 'image/jpg'], true)) {
             return $url;
         }
